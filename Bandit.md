@@ -1,5 +1,8 @@
-||| as a command separator
-0. ssh bandit0@bandit.labs.overthewire.org              bandit0                   cd ~ ||| vi readme           
+####Solution for [Bandit Wargames from overthewire.org](http://overthewire.org/wargames/bandit/)
+###### ||| exists as a command separator
+
+
+0.  ssh bandit0@bandit.labs.overthewire.org             cd ~ ||| vi readme           
 
 1.  boJ9jbbUNNfktd78OOpsqOltutMc3MY1                    cat /home/bandit1/-
 
@@ -31,11 +34,22 @@
 
 15. BfMYroe26WYalil77FoDi9qh59eK5xNr                    openssl s_client -ign_eof -connect localhost:30001 ||| type prev pass: BfMYroe26WYalil77FoDi9qh59eK5xNr
 
-16. cluFn7wTiGryunymYOu4RcffSxQluehd                    nmap -p 31000-32000 localhost | grep -o '^[0-9]\+' > /tmp/portsbandit16 ||| while read -r port; do openssl s_client -ign_eof -connect localhost:$port; echo "checking port: "$port" ..."; done < /tmp/portsbandit16;  ||| echo "-----BEGIN RSA PRIVATE KEY-----.... -----END RSA PRIVATE KEY-----" > /tmp/sshkey16.private ||| chmod 600 /tmp/sshkey16.private ||| ssh -i /tmp/sshkey16.private bandit17@localhost
+16. cluFn7wTiGryunymYOu4RcffSxQluehd                    nmap -p 31000-32000 localhost | grep -o '^[0-9]\+' > /tmp/portsbandit16 ||| while read -r port; do openssl s_client -ign_eof -connect localhost:$port; echo "checking port: "$port" ..."; done < /tmp/portsbandit16;  ||| echo "-----BEGIN RSA PRIVATE KEY-----...   -----END RSA PRIVATE KEY-----" > /tmp/sshkey16.private ||| chmod 600 /tmp/sshkey16.private ||| ssh -i /tmp/sshkey16.private bandit17@localhost
 
 17. diff passwords.new passwords.old
 
-18. kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd                    on local: mkdir bandit19bashrc ||| cd bandit19bashrc ||| scp bandit18@bandit.labs.overthewire.org:.bashrc .
+18. kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd                    ssh bandit18@bandit.labs.overthewire.org cat readme
+
+19. IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x                    ./bandit20-do ||| ./bandit20-do id ||| ./bandit20-do whoami ||| ./bandit20-do cat /etc/bandit_pass/bandit20
+
+20. GbKksEFF4yrVs6il55v6gwY5aVje5f0j                    server: nc -l -p 30222 ||| client: ./suconnect 30222  ||| server: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+
+21. gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr                    cat /etc/cron.d ||| ls -la ||| cat cronjob_bandit22 ||| cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+
+22. Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI                    cd /etc/cron.d/ && ls -l ||| cat cronjob_bandit23 ||| cat /usr/bin/cronjob_bandit23.sh ||| target=$(echo I am user bandit23 | md5sum | cut -d ' ' -f 1) ||| cat /tmp/$target
+
+23. jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n                    cd /etc/cron.d/ && ls -ll | cat cronjob_bandit24 ||| 
+      
 
 
 
