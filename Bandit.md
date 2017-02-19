@@ -2,7 +2,7 @@
 ###### ||| exists as a command separator
 
 
-0.  ssh bandit0@bandit.labs.overthewire.org             ```cd ~ ||| vi readme```           
+0.  ```ssh bandit0@bandit.labs.overthewire.org ||| cd ~ ||| vi readme```           
 
 1.  boJ9jbbUNNfktd78OOpsqOltutMc3MY1                    ```cat /home/bandit1/-```
 
