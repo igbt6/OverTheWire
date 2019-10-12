@@ -1,28 +1,27 @@
-# Solution for [Bandit Wargames from overthewire.org](http://overthewire.org/wargames/bandit/)
+# Solution for [Bandit Wargames](http://overthewire.org/wargames/bandit/)
 
 
 
-* [Level 1](http://overthewire.org/wargames/bandit/bandit1.html)
-```
+### [Level 1](http://overthewire.org/wargames/bandit/bandit1.html)
+```sh
       ssh bandit0@bandit.labs.overthewire.org
       cd ~
       vi readme
 ```           
 
-* [Level 2](http://overthewire.org/wargames/bandit/bandit2.html)                    
+### [Level 2](http://overthewire.org/wargames/bandit/bandit2.html)                    
 ```
       cat /home/bandit1/-
-      
-      FLAG: `boJ9jbbUNNfktd78OOpsqOltutMc3MY1`  
 ```
+      *FLAG: `boJ9jbbUNNfktd78OOpsqOltutMc3MY1`*  
 
-* [Level 3](http://overthewire.org/wargames/bandit/bandit3.html)
+### [Level 3](http://overthewire.org/wargames/bandit/bandit3.html)
 CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9                    
 ```
       cat /home/bandit2/spaces\ in\ this\ filename
 ``` 
 
-* [Level 4](http://overthewire.org/wargames/bandit/bandit4.html)
+### [Level 4](http://overthewire.org/wargames/bandit/bandit4.html)
 UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK                    
 ```   cd ~
       cd inhere/
@@ -30,7 +29,7 @@ UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
       cat .hidden
 ``` 
 
-* [Level 5](http://overthewire.org/wargames/bandit/bandit5.html)
+### [Level 5](http://overthewire.org/wargames/bandit/bandit5.html)
 pIwrPrtPN36QITSp3EQaw936yaFoFgAB
 ```
       cd ~
@@ -38,26 +37,26 @@ pIwrPrtPN36QITSp3EQaw936yaFoFgAB
       grep -r "^[a-zA-Z0-9]*" .
 ```
 
-* [Level 6](http://overthewire.org/wargames/bandit/bandit6.html)
+### [Level 6](http://overthewire.org/wargames/bandit/bandit6.html)
 koReBOKuIDDepwhWk7jZC0RTdopnAYKh
 ```
       cd inhere/
       find . -depth -size 1033c | xargs cat
 ``` 
 
-* [Level 7](http://overthewire.org/wargames/bandit/bandit7.html)
+### [Level 7](http://overthewire.org/wargames/bandit/bandit7.html)
 DXjZPULLxYr17uwoI01bNLQbtFemEgo7
 ```
       find / -size 33c -user bandit7 -group bandit6 2>/dev/null | xargs cat
 ```
 
-* [Level 8](http://overthewire.org/wargames/bandit/bandit8.html)
+### [Level 8](http://overthewire.org/wargames/bandit/bandit8.html)
 HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
 ```
       grep "millionth" data.txt
 ```
 
-* [Level 9](http://overthewire.org/wargames/bandit/bandit9.html)
+### [Level 9](http://overthewire.org/wargames/bandit/bandit9.html)
 cvX2JJa4CFALtqS87jk27qwqGhBM9plV                    
 ```
       sort data.txt | uniq -u
