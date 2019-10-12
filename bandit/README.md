@@ -4,7 +4,8 @@
 
 ### [Level 1](http://overthewire.org/wargames/bandit/bandit1.html)
 ```sh
-      ssh bandit0@bandit.labs.overthewire.org
+      ssh bandit0@bandit.labs.overthewire.org -p 2220
+      bandit0@bandit.labs.overthewire.org's password: bandit0
       cd ~
       vi readme
 ```           
