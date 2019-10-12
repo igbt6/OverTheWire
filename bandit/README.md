@@ -14,7 +14,7 @@
 ```sh
       cat /home/bandit1/-
 ```
-``` FLAG: boJ9jbbUNNfktd78OOpsqOltutMc3MY1``` 
+``` FLAG: boJ9jbbUNNfktd78OOpsqOltutMc3MY1```  
 
 
 ### [Level 3](http://overthewire.org/wargames/bandit/bandit3.html)
