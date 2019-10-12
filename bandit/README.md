@@ -2,7 +2,7 @@
 
 
 
-### [Level 1](http://overthewire.org/wargames/bandit/bandit1.html)
+### [Level 0](http://overthewire.org/wargames/bandit/bandit0.html)(http://overthewire.org/wargames/bandit/bandit1.html)
 ```sh
       ssh bandit0@bandit.labs.overthewire.org -p 2220
       bandit0
@@ -12,7 +12,7 @@
 ``` FLAG: boJ9jbbUNNfktd78OOpsqOltutMc3MY1```
 
 
-### [Level 2](http://overthewire.org/wargames/bandit/bandit2.html)                    
+### [Level 1](http://overthewire.org/wargames/bandit/bandit2.html)                    
 ```sh 
       ssh bandit1@bandit.labs.overthewire.org -p 2220
       boJ9jbbUNNfktd78OOpsqOltutMc3MY1
@@ -21,7 +21,7 @@
 ``` FLAG: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9```
 
 
-### [Level 3](http://overthewire.org/wargames/bandit/bandit3.html)
+### [Level 2](http://overthewire.org/wargames/bandit/bandit3.html)
                     
 ```sh 
       ssh bandit2@bandit.labs.overthewire.org -p 2220
@@ -31,7 +31,7 @@
 ``` FLAG: UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK```
 
 
-### [Level 4](http://overthewire.org/wargames/bandit/bandit4.html)                 
+### [Level 3](http://overthewire.org/wargames/bandit/bandit4.html)                 
 ```sh 
       ssh bandit3@bandit.labs.overthewire.org -p 2220
       UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
@@ -43,7 +43,7 @@
 ``` FLAG: pIwrPrtPN36QITSp3EQaw936yaFoFgAB```
 
 
-### [Level 5](http://overthewire.org/wargames/bandit/bandit5.html)
+### [Level 4](http://overthewire.org/wargames/bandit/bandit5.html)
 
 ```sh 
       ssh bandit4@bandit.labs.overthewire.org -p 2220
@@ -55,7 +55,7 @@
 ``` FLAG: koReBOKuIDDepwhWk7jZC0RTdopnAYKh```
 
 
-### [Level 6](http://overthewire.org/wargames/bandit/bandit6.html)
+### [Level 5](http://overthewire.org/wargames/bandit/bandit6.html)
 
 ```sh 
       ssh bandit5@bandit.labs.overthewire.org -p 2220
@@ -66,7 +66,7 @@
 ``` FLAG: DXjZPULLxYr17uwoI01bNLQbtFemEgo7```
 
 
-### [Level 7](http://overthewire.org/wargames/bandit/bandit7.html)
+### [Level 6](http://overthewire.org/wargames/bandit/bandit7.html)
 
 ```sh 
       ssh bandit6@bandit.labs.overthewire.org -p 2220
@@ -76,7 +76,7 @@
 ``` FLAG: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs```
 
 
-### [Level 8](http://overthewire.org/wargames/bandit/bandit8.html)
+### [Level 7](http://overthewire.org/wargames/bandit/bandit8.html)
 
 ```sh 
       ssh bandit7@bandit.labs.overthewire.org -p 2220
@@ -86,7 +86,7 @@
 ``` FLAG: cvX2JJa4CFALtqS87jk27qwqGhBM9plV```
 
 
-### [Level 9](http://overthewire.org/wargames/bandit/bandit9.html)
+### [Level 8](http://overthewire.org/wargames/bandit/bandit9.html)
                     
 ```sh 
       ssh bandit8@bandit.labs.overthewire.org -p 2220
@@ -96,7 +96,7 @@
 ``` FLAG: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR```
 
 
-### [Level 10](http://overthewire.org/wargames/bandit/bandit10.html)
+### [Level 9](http://overthewire.org/wargames/bandit/bandit10.html)
                    
 ```sh 
       ssh bandit9@bandit.labs.overthewire.org -p 2220
@@ -106,7 +106,7 @@
 ``` FLAG: truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk```
 
 
-### [Level 11](http://overthewire.org/wargames/bandit/bandit11.html)
+### [Level 10](http://overthewire.org/wargames/bandit/bandit11.html)
                     
 ```sh 
       ssh bandit10@bandit.labs.overthewire.org -p 2220
@@ -116,7 +116,7 @@
 ``` FLAG: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR```
 
 
-### [Level 12](http://overthewire.org/wargames/bandit/bandit12.html)
+### [Level 11](http://overthewire.org/wargames/bandit/bandit12.html)
                     
 ```sh 
       ssh bandit11@bandit.labs.overthewire.org -p 2220
@@ -126,7 +126,7 @@
 ``` FLAG: 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu```
 
 
-### [Level 13](http://overthewire.org/wargames/bandit/bandit13.html)
+### [Level 12](http://overthewire.org/wargames/bandit/bandit13.html)
                     
 ```sh 
       ssh bandit12@bandit.labs.overthewire.org -p 2220
@@ -148,7 +148,7 @@
 ``` FLAG: 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL```
 
 
-### [Level 14](http://overthewire.org/wargames/bandit/bandit14.html)
+### [Level 13](http://overthewire.org/wargames/bandit/bandit14.html)
                     
 ```sh 
       ssh bandit13@bandit.labs.overthewire.org -p 2220
@@ -161,7 +161,7 @@
 ``` FLAG: 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e```
 
 
-### [Level 15](http://overthewire.org/wargames/bandit/bandit15.html)
+### [Level 14](http://overthewire.org/wargames/bandit/bandit15.html)
                     
 ```sh 
       ssh bandit14@bandit.labs.overthewire.org -p 2220
@@ -172,7 +172,7 @@
 ``` FLAG: BfMYroe26WYalil77FoDi9qh59eK5xNr```
 
 
-### [Level 16](http://overthewire.org/wargames/bandit/bandit16.html)
+### [Level 15](http://overthewire.org/wargames/bandit/bandit16.html)
                    
 ```sh 
       ssh bandit15@bandit.labs.overthewire.org -p 2220
@@ -183,7 +183,7 @@
 ``` FLAG: cluFn7wTiGryunymYOu4RcffSxQluehd```
 
 
-### [Level 17](http://overthewire.org/wargames/bandit/bandit17.html)
+### [Level 16](http://overthewire.org/wargames/bandit/bandit17.html)
                     
 ```sh 
       ssh bandit16@bandit.labs.overthewire.org -p 2220
@@ -226,7 +226,7 @@ vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 ``` FLAG: xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn```
 
 
-### [Level 18](http://overthewire.org/wargames/bandit/bandit18.html)
+### [Level 17](http://overthewire.org/wargames/bandit/bandit18.html)
 ```sh 
       * Logged on from Level 17
       diff passwords.new passwords.old
@@ -234,7 +234,7 @@ vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 ``` FLAG: kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd```
 
 
-### [Level 19](http://overthewire.org/wargames/bandit/bandit19.html)
+### [Level 18](http://overthewire.org/wargames/bandit/bandit19.html)
                     
 ```sh 
       ssh -t bandit18@bandit.labs.overthewire.org -p 2220 /bin/sh
@@ -244,7 +244,7 @@ vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 ``` FLAG: IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x```
 
 
-### [Level 20](http://overthewire.org/wargames/bandit/bandit20.html)
+### [Level 19](http://overthewire.org/wargames/bandit/bandit20.html)
                  
 ```sh 
       ssh bandit19@bandit.labs.overthewire.org -p 2220
@@ -257,7 +257,7 @@ vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 ``` FLAG: GbKksEFF4yrVs6il55v6gwY5aVje5f0j```
 
 
-### [Level 21](http://overthewire.org/wargames/bandit/bandit21.html)
+### [Level 20](http://overthewire.org/wargames/bandit/bandit21.html)
                     
 ```sh 
       ssh bandit20@bandit.labs.overthewire.org -p 2220
@@ -269,7 +269,7 @@ vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 ``` FLAG: gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr```
 
 
-### [Level 22](http://overthewire.org/wargames/bandit/bandit22.html)
+### [Level 21](http://overthewire.org/wargames/bandit/bandit22.html)
                     
 ```sh 
       ssh bandit21@bandit.labs.overthewire.org -p 2220
@@ -282,7 +282,7 @@ vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 ``` FLAG: Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI```
 
 
-### [Level 23](http://overthewire.org/wargames/bandit/bandit23.html)
+### [Level 22](http://overthewire.org/wargames/bandit/bandit23.html)
                     
 ```sh 
       ssh bandit22@bandit.labs.overthewire.org -p 2220
@@ -296,7 +296,7 @@ vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 ``` FLAG: jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n```
 
 
-### [Level 24](http://overthewire.org/wargames/bandit/bandit24.html)
+### [Level 23](http://overthewire.org/wargames/bandit/bandit24.html)
                     
 ```sh 
       ssh bandit23@bandit.labs.overthewire.org -p 2220
