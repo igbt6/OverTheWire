@@ -411,4 +411,60 @@ I got the flag:
       uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
 ``` 
 
+```sh
+      $ bandit25@bandit:~$ ls -a
+.     ..  .bandit24.password  bandit26.sshkey  .bash_logout  .bashrc  .pin  .profile
 
+      $ ssh bandit26@localhost -i bandit26.sshkey
+```
+I was logged out quickly. It looks like `/bin/bash` is really not the shel for bandit26.
+Lets check what is it then
+```
+      $ cat /etc/passwd | grep bandit26
+      bandit26:x:11026:11026:bandit level 26:/home/bandit26:/usr/bin/showtext
+``` 
+Looking at the content of the file:
+```
+      bandit25@bandit:~$ cat /usr/bin/showtext
+      #!/bin/sh
+
+      export TERM=linux
+
+      more ~/text.txt
+      exit 0
+```
+We can see that the script calls `more` tool.
+To make a `more` not closing I had to decrease size (horizontally) of my console window from which I called ```ssh bandit26@localhost -i bandit26.sshkey```
+
+Then you have to press `v` command when in `more`. It will launch `vi` editor.
+Input: ```:e /etc/bandit_pass/bandit26``` and you get the flag:
+``` FLAG: 5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z```
+
+To change a shell to `/bin/bash` input: ```:set shell=/bin/bash``` from `vi`
+Now we can go into `bandit26` shell by typing from `vi`:
+```:shell``
+
+
+### [Level 26](http://overthewire.org/wargames/bandit/bandit26.html)
+                    
+See level 25 to get here.
+```
+bandit26@bandit:~$ ls 
+bandit27-do  text.txt
+
+bandit26@bandit:~$ ./bandit27-do 
+Run a command as another user.
+  Example: ./bandit27-do id
+
+bandit26@bandit:~$ ./bandit27-do cat /etc/bandit_pass/bandit27 
+3ba3118a22e93127a4ed485be72ef5ea
+```
+``` FLAG: 3ba3118a22e93127a4ed485be72ef5ea```
+
+
+### [Level 27](http://overthewire.org/wargames/bandit/bandit27.html)
+                    
+```sh 
+      ssh bandit27@bandit.labs.overthewire.org -p 2220
+      3ba3118a22e93127a4ed485be72ef5ea
+``` 
