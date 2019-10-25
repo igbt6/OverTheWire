@@ -560,4 +560,31 @@ index 3f7cee8..5c6457b 100644
 ```sh 
 ssh bandit29@bandit.labs.overthewire.org -p 2220
 bbc96594b4e001778eee9975372716b2
+
+mkdir -p /tmp/bandit29lu/ && cd /tmp/bandit29lu/
+git clone ssh://bandit29-git@localhost/home/bandit29-git/repo
+bbc96594b4e001778eee9975372716b2
 ```
+
+```
+cd repo && ls -la
+
+bandit29@bandit:/tmp/bandit29lu/repo$ git branch --all
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/dev
+  remotes/origin/master
+  remotes/origin/sploits-dev
+
+
+bandit29@bandit:/tmp/bandit29lu/repo$ git checkout dev
+bandit29@bandit:/tmp/bandit29lu/repo$ cat README.md 
+# Bandit Notes
+Some notes for bandit30 of bandit.
+
+## credentials
+
+- username: bandit30
+- password: 5b90576bedb2cc04c86a9e924ce42faf
+```
+``` FLAG: 5b90576bedb2cc04c86a9e924ce42faf```
