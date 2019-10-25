@@ -609,3 +609,65 @@ bandit30@bandit:/tmp/bandit30lu/repo$ git show secret
 47e603bb428404d265f59c42920d81e5
 ```
 ``` FLAG: 47e603bb428404d265f59c42920d81e5```
+
+
+
+### [Level 31](http://overthewire.org/wargames/bandit/bandit31.html)
+                    
+```sh 
+ssh bandit31@bandit.labs.overthewire.org -p 2220
+47e603bb428404d265f59c42920d81e5
+
+mkdir -p /tmp/bandit31lu/ && cd /tmp/bandit31lu/
+git clone ssh://bandit31-git@localhost/home/bandit31-git/repo
+47e603bb428404d265f59c42920d81e5
+```
+
+```
+bandit31@bandit:/tmp/bandit31lu/repo$ cat README.md 
+This time your task is to push a file to the remote repository.
+
+Details:
+    File name: key.txt
+    Content: 'May I come in?'
+    Branch: master
+
+bandit31@bandit:/tmp/bandit31lu/repo$ touch key.txt
+bandit31@bandit:/tmp/bandit31lu/repo$ chmod a+x key.txt 
+bandit31@bandit:/tmp/bandit31lu/repo$ echo 'May I come in?' > key.txt 
+bandit31@bandit:/tmp/bandit31lu/repo$ rm .gitignore 
+bandit31@bandit:/tmp/bandit31lu/repo$ git add .
+bandit31@bandit:/tmp/bandit31lu/repo$ git commit -m"key.txt"
+[master 8f8414b] key.txt
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ delete mode 100644 .gitignore
+ create mode 100755 key.txt
+bandit31@bandit:/tmp/bandit31lu/repo$ git push
+Could not create directory '/home/bandit31/.ssh'.
+The authenticity of host 'localhost (127.0.0.1)' can't be established.
+ECDSA key fingerprint is SHA256:98UL0ZWr85496EtCRkKlo20X3OPnyPSB5tB5RPbhczc.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/bandit31/.ssh/known_hosts).
+This is a OverTheWire game server. More information on http://www.overthewire.org/wargames
+
+bandit31-git@localhost's password: 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 290 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote: ### Attempting to validate files... ####
+remote: 
+remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
+remote: 
+remote: Well done! Here is the password for the next level:
+remote: 56a9bf19c63d650ce78e6ec0354ee45e
+remote: 
+remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
+remote: 
+To ssh://localhost/home/bandit31-git/repo
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'ssh://bandit31-git@localhost/home/bandit31-git/repo'
+bandit31@bandit:/tmp/bandit31lu/repo$ 
+```
+``` FLAG: 56a9bf19c63d650ce78e6ec0354ee45e```
