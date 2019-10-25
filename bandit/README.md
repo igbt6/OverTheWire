@@ -588,3 +588,24 @@ Some notes for bandit30 of bandit.
 - password: 5b90576bedb2cc04c86a9e924ce42faf
 ```
 ``` FLAG: 5b90576bedb2cc04c86a9e924ce42faf```
+
+
+### [Level 30](http://overthewire.org/wargames/bandit/bandit30.html)
+                    
+```sh 
+ssh bandit30@bandit.labs.overthewire.org -p 2220
+5b90576bedb2cc04c86a9e924ce42faf
+
+mkdir -p /tmp/bandit30lu/ && cd /tmp/bandit30lu/
+git clone ssh://bandit30-git@localhost/home/bandit30-git/repo
+5b90576bedb2cc04c86a9e924ce42faf
+```
+
+```
+bandit30@bandit:/tmp/bandit30lu/repo$ git tag -l
+secret
+
+bandit30@bandit:/tmp/bandit30lu/repo$ git show secret
+47e603bb428404d265f59c42920d81e5
+```
+``` FLAG: 47e603bb428404d265f59c42920d81e5```
