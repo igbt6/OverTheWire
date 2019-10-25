@@ -671,3 +671,22 @@ error: failed to push some refs to 'ssh://bandit31-git@localhost/home/bandit31-g
 bandit31@bandit:/tmp/bandit31lu/repo$ 
 ```
 ``` FLAG: 56a9bf19c63d650ce78e6ec0354ee45e```
+
+
+### [Level 32](http://overthewire.org/wargames/bandit/bandit32.html)
+                    
+```sh 
+ssh bandit32@bandit.labs.overthewire.org -p 2220
+56a9bf19c63d650ce78e6ec0354ee45e
+```
+Run interactive shell `$0`
+```
+WELCOME TO THE UPPERCASE SHELL
+>> $0
+$ 
+$ ls -a
+.  ..  .bash_logout  .bashrc  .profile  uppershell
+$ cat /etc/bandit_pass/bandit33
+c9c3199ddf4121b10cf581a98d51caee
+```
+``` FLAG: c9c3199ddf4121b10cf581a98d51caee```
