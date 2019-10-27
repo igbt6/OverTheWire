@@ -92,3 +92,10 @@ $ cat /etc/leviathan_pass/leviathan2
 ougahZi8Ta
 ```
 ``` FLAG: ougahZi8Ta```
+
+
+
+### [Level 3](http://overthewire.org/wargames/leviathan/leviathan3.html)
+```sh
+$ sshpass -p 'ougahZi8Ta' ssh leviathan2@leviathan.labs.overthewire.org -p 2223
+```
